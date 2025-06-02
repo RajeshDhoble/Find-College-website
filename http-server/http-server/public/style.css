@@ -1,0 +1,1792 @@
+body {
+    margin: 0px;
+    background-image: #f4f4f9;
+}
+
+
+/* header social media info */
+.d1 {
+    float:right;
+    display: flex;
+    font-size: 1.4rem;
+    display: flex;
+    background: transparent;
+    color: black;
+    gap: 1px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+
+/* header social media padding and margin settings*/
+#p1 {
+    margin: 5px;
+    padding: 10px;
+}
+
+#p2 {
+    margin: 5px;
+    padding: 10px;
+}
+
+#p3 {
+    margin: 5px;
+    padding: 10px
+    
+}
+
+
+/* header */
+.d2 {
+    justify-content : center ;
+    height: 50px;
+    display:flex;
+    background-color: white; /*#9DC08B */
+    color:antiquewhite;
+    margin:0px;
+    padding: 8px;
+    margin-top: 0px; 
+    position: relative;
+    gap: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* header dropdown padding and margin settings */
+#p4 {
+    margin: 10px;
+    padding: 10px;
+}
+
+#p5 {
+    margin: 10px;
+    padding: 10px;
+}
+
+#p6 {
+    margin: 10px;
+    padding: 10px
+    
+}
+
+#p7 {
+    margin: 10px;
+    padding: 10px
+    
+}
+
+/* search bar */
+
+.top-caption {
+    
+    /* Add gradient text effect */
+    /* background: radial-gradient(maroon, brown , blue); */
+    background: linear-gradient(45deg,maroon, brown , blue);
+    opacity: 0.7;
+    transition: 0.5s;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Enhance the look with some text shadow for depth */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 60px;
+    margin-left: 15%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    
+    /* Add some additional styling to enhance the text */
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
+}
+
+.top-caption:hover {
+    opacity: 1;
+}
+
+.search {
+    background-color: #fee6ae;
+    max-width: 50%;
+    height: 65px;
+    float: center;
+    margin:  auto;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+    position : relative;
+    margin-top: px;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    /* backdrop-filter: blur(5px) */
+    
+}
+
+.search1 {
+    font-family: 'Times New Roman', Times, serif;
+    width: 85%;
+    height:px;
+    background: transparent;
+    border: 0.1px solid transparent;
+    border-right: none;
+    margin-top: 0px;
+    /* border-right: none; */
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    transition: all 0.5s ease; /* Add transition for all properties */
+    
+}
+
+.search1:hover {
+    background-color: rgba(255, 255, 255, 1);
+    color: #000;
+    border-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.search1:focus {
+    
+    background-color: white;
+    color: #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add slight inner glow */
+}
+
+.btn {
+    width: 100px;
+    height: 65px;
+    opacity: .69;
+    /* background-color: gray; */
+    background: linear-gradient(45deg, #f0810f,#3a6ec5);
+    border: 0px solid darkgray; /*#1f2937*/
+    margin-top: 0px;
+    color: white;
+    font-size: 15px;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    transition: all 0.5s ease;
+}
+.btn:hover {
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+    outline: none;
+    
+}
+.search1:focus {
+    outline: none;
+}
+
+.search-container {
+
+    /* soft-pastel */
+    /* background-image:  linear-gradient(45deg,  #134E5E 4px, #E0F1F1 ); */
+    background-image:  linear-gradient(145deg,  #f9d180 30px, #E0F1F1 300px);
+    /* mint-leaf */
+    /* background-image: linear-gradient(45deg, #0F2027, #2C5364); */
+
+    /* forest-green */
+    /* background-image: linear-gradient(45deg, #134E5E, #71B280); */
+
+    /* padding: 150px 20px; */
+    padding: 15px 20px;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.4);
+   
+}
+
+/* Placeholder styling */
+::placeholder { /* for Chrome, Firefox, Opera, Safari 10.1+ */
+    /* color: #999; */
+    color: black;
+    font-style: italic;
+    opacity: 0.34;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+    padding-left: 15px;
+}
+
+/*Change placeholder appearance on input focus */
+.search1:focus::placeholder {
+    opacity: 0.5;
+}
+
+
+.option {
+    background-color:#9DC08C;
+    border-radius: 30px; 
+    
+}
+
+
+/* font */
+.slabo-13px-regular {
+    font-family: "Slabo 13px", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+  /* header dropdown */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+/* header buttons */
+.dropdown-btn {
+    /* background-color:dimgrey; */
+    /* background-color: #2c5282; */
+
+    background: linear-gradient(80deg,maroon, brown );
+    opacity: 0.7;
+
+    /* background-color: dimgray; */
+    color: white;
+    padding:0.5rem 1rem;
+    margin-top: 5px;
+    font-size: 1rem;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-btn:hover{
+    background: linear-gradient(180deg,maroon, brown );
+    opacity: 0.75;
+}
+
+
+.dropdown-content {
+    margin-top: -5px;
+    display: none;
+    position: absolute;
+    /* background-color: #E6E9AF; */
+    background-color: white;
+    min-width: 100%;
+    box-shadow: 10px 10px 20px 5px rgb(0, 0, 0, 0.1);
+    z-index: 1;
+    border-radius: 4px;
+    border: 0.2px solid rgba(0,0,0, 0.2)
+}
+
+.dropdown-content a {
+    
+    text-decoration: none;
+    color: gray;
+    padding: 12px 16px;
+    display: block;
+    transition: background-color 0.6s;
+}
+
+.dropdown-content a:hover {
+    /* padding-top: 40px; */
+    background-color:lightsteelblue;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-btn {
+    background-color:dimgrey;
+}
+
+
+
+/* cards style*/
+
+/* College Cards Section */
+.college-cards-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    text-align: center;
+    color: #2c5282;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    position: relative;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    background-color: #3a6ea5;
+    bottom: -10px;
+    left: calc(50% - 40px);
+}
+
+.college-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.college-card {
+    background: white;
+    border-radius: 8px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    /* width: 340px; */
+    width:280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    BORDER: 0.1px solid rgba(0,0,0,0.2);
+}
+
+.college-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.college-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+}
+
+.college-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.college-card:hover .college-image img {
+    transform: scale(1.05);
+}
+
+.college-info {
+    padding: 15px;
+}
+
+.college-info h3 {
+    margin: 0 0 10px;
+    color: #1f2937;
+    font-size: 1rem;
+}
+
+.location {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.location i {
+    color: #f0810f;
+    margin-right: 5px;
+}
+
+.college-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.college-details i {
+    color: #3a6ea5;
+    margin-right: 5px;
+}
+
+.college-courses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.course-tag {
+    background: #e6f0ff;
+    color: #3a6ea5;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+}
+
+.view-details {
+    display: inline-block;
+    background: #3a6ea5;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.view-details:hover {
+    background: #2c5282;
+}
+
+/* footer */
+footer{
+    background: #2D3748;
+    color:white;
+    text-align:center;
+}
+
+.footer-comtainer{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    max-width:1100px;
+    margin:auto;
+}
+
+.footer-section{
+    flex:1;
+    padding:20px;
+    min-width:250px;
+}
+
+.footer-section h2{
+    font-size:18px;
+    border-bottom:2px-solid #ff9800;
+    display:inline-block;
+    padding-bottom:5px;
+    margin-bottom:15px;
+}
+
+.footer-section p, .footer-section ul{
+    font-size:14px; 
+    color:#d3d3d3;
+}
+
+.footer-section-link ul li{
+    margin:10px 0;
+}
+
+.footer-section-link ul li a{ color:#ff9800;
+text-decoration:none;
+}
+
+.footer-section-link ul{
+    list-style-type:none;
+    padding:0;
+}
+
+.footer-bottom{
+    margin-top:20px;
+    padding:10px;
+    background:#2c5282 ;
+    font-size:14px;
+}
+
+.footer-section-link a{
+    display:inline;
+    color:#ff9800;
+    margin:5px 0;
+    text-decoration:none;
+    transition:0.4s;
+}
+
+.clg-name{
+    background-color: #2D3748;
+    border-radius: 5px;
+    color: white;
+    display: inline;
+       
+}
+
+.clg-name:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.65);
+   transition: 1.4s ease;
+}
+
+.clg-loc {
+    border-radius: 5px;
+    color: white;
+}
+
+.clg-rank {
+    border-radius: 5px;
+    color: white;
+}
+
+.college-card-search {
+    display: flex;
+    justify-content:center ;
+    background: white;
+    border-radius: 15px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+    overflow: hidden;
+    /* width: 340px; */
+    /* width:250px; */
+    width: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 20px;
+    margin-left: 50px;
+    /* margin-left: 20%; */
+    BORDER: 0.1px solid rgba(0,0,0,0.2);
+}
+
+
+.college-card-search:hover {
+    transform: translate(5px, -10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.view-details-search {
+    display: inline-block;
+    /*#3a6ea5 */
+     background: gray; 
+    /* background: linear-gradient(45deg, #f0810d,#3a6ec5); */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+ /* inside search card  */
+.college-info-search {
+    max-width: 230px;
+    margin-top: 10px;
+    padding: 15px;
+
+}
+
+/* search resealt back below form*/
+#searchResults {
+    background-color: #9DC08C;
+    background: linear-gradient(45deg, white,#3a6ec5);
+    margin-top: 50px;
+    border-radius: 20px;
+    /* width: 500px; */
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+
+}
+
+
+/* Responsive adjustment for smaller screens */
+
+@media (max-width: 768px) {
+    .college-card-search {
+      flex-direction: column;
+    }
+  }
+
+@media (max-width:600px) {
+    .d2 {
+      gap: 5px;
+      height: 65px;
+    }
+  }
+ 
+@media (max-width:850px) {
+    .d1{
+        flex-direction: column;
+        margin-top: 75px;
+        margin-left: 70px;
+        background-color: white;
+        border-radius: 20px;
+    }
+  }  
+
+  /* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .college-card-search {
+        flex-direction: column;
+        width: 95%;
+    }
+}
+
+
+.user-auth {
+    padding-right: 20px;
+    padding:0.5rem 1rem;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+
+/* Add this to your style.css file */
+
+.view-details-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 16px;
+    background: linear-gradient(45deg, #f0810f, #f89b4c);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  .view-details-btn:hover {
+    background: linear-gradient(45deg, #e67600, #f0810f);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .apply-now-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: linear-gradient(45deg, #f0810f, #e53e3e);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(229, 62, 62, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.apply-now-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(229, 62, 62, 0.4);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* Search Results Grid Layout */
+.search-result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-card {
+    padding: 15px;
+    background: white;
+    height: 100%;
+  }
+  
+  .college-info-card {
+    border-right: 1px solid #eee;
+  }
+  
+  .photo-slider-card {
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-card h3 {
+    margin-top: 0;
+    color: #3a6ea5;
+    font-size: 1.2rem;
+  }
+  
+  .search-card h4 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  /* Photo Slider Styles */
+  .photo-slider {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Increased to make room for buttons */
+    flex-grow: 1;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    display: block;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px; /* Changed from auto to a specific value */
+    position: relative;
+    z-index: 5; /* Ensure buttons are above images */
+  }
+  
+  .prev-btn, .next-btn, .satellite-btn {
+    padding: 8px 15px; /* Increased padding */
+    background: #3a6ea5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Make text bolder */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow for better visibility */
+    transition: all 0.2s ease;
+  }
+  
+  .prev-btn:hover, .next-btn:hover, .satellite-btn:hover {
+    background: #2c5282; /* Darker on hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Make map container smaller in search results */
+  .search-result-grid .map-container {
+    height: 150px; /* Reduced from 200px */
+    margin-bottom: 10px;
+  }
+  
+  /* Keep the larger size for the detail page */
+  .map-container {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  
+  /* Card with no content */
+  .no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    color: #888;
+  }
+  
+  /* Map container */
+  .map-container {
+    height: 200px;
+    margin-bottom: 10px;
+  }
+  
+  /* Make it responsive */
+  @media (max-width: 768px) {
+    .search-result-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .college-info-card, .photo-slider-card {
+      border-right: none;
+      border-bottom: 1px solid #eee;
+    }
+  }
+
+
+
+
+
+
+
+
+  /* Search Results Grid Layout */
+.search-result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-card {
+    padding: 15px;
+    background: white;
+    height: 100%;
+  }
+  
+  .college-info-card {
+    border-right: 1px solid #eee;
+  }
+  
+  .photo-slider-card {
+    border-right: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-card h3 {
+    margin-top: 0;
+    color: #3a6ea5;
+    font-size: 1.2rem;
+  }
+  
+  .search-card h4 {
+    margin-top: 0;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  /* Photo Slider Styles */
+  .photo-slider {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Increased to make room for buttons */
+    flex-grow: 1;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    display: none;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    display: block;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px; /* Changed from auto to a specific value */
+    position: relative;
+    z-index: 5; /* Ensure buttons are above images */
+  }
+  
+  .prev-btn, .next-btn, .satellite-btn {
+    padding: 8px 15px; /* Increased padding */
+    background: #3a6ea5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold; /* Make text bolder */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Add shadow for better visibility */
+    transition: all 0.2s ease;
+  }
+  
+  .prev-btn:hover, .next-btn:hover, .satellite-btn:hover {
+    background: #2c5282; /* Darker on hover */
+    transform: translateY(-2px);
+  }
+  
+  /* Make map container smaller in search results */
+  .search-result-grid .map-container {
+    height: 150px; /* Reduced from 200px */
+    margin-bottom: 10px;
+  }
+  
+  /* Keep the larger size for the detail page */
+  .map-container {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+  
+  .view-details-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #3a6ea5;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #2c5282;
+  }
+
+  /* Photo Gallery Styles */
+.photo-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+.photo-gallery img {
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.map-container {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.no-content-message {
+    padding: 30px;
+    text-align: center;
+    background: #f8fafc;
+    border-radius: 8px;
+    color: #718096;
+}
+
+.satellite-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #3a6ea5;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Search Results Grid Layout - Adjusted column widths */
+.search-result-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.8fr; /* Changed from equal widths to make map narrower */
+  grid-gap: 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Photo Slider Styles */
+.photo-slider {
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 10px; /* Reduced to bring buttons up */
+  flex-grow: 1;
+}
+
+/* Enhanced slider navigation */
+.slider-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0; /* Moved to top of buttons */
+  position: relative;
+  z-index: 5;
+}
+
+/* Make slider buttons much more visible */
+.prev-btn, .next-btn {
+  padding: 8px 15px;
+  background: rgba(58, 110, 165, 0.85); /* Slightly transparent */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+  position: relative;
+  top: -85px; /* Move buttons up into the image area */
+}
+
+.prev-btn {
+  left: 5px;
+}
+
+.next-btn {
+  right: 5px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: #2c5282;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* Satellite button renamed to Immersive View */
+.satellite-btn, .immersive-btn {
+  padding: 8px 15px;
+  background: #3a6ea5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.satellite-btn:hover, .immersive-btn:hover {
+  background: #2c5282;
+  transform: translateY(-2px);
+}
+
+/* Immersive view modal */
+.immersive-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.85);
+  overflow: auto;
+}
+
+.immersive-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  margin: 2% auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.immersive-content iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-immersive {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+  transition: all 0.2s ease;
+}
+
+.close-immersive:hover {
+  background: rgba(0,0,0,0.8);
+  transform: scale(1.1);
+}
+
+/* Make map container smaller and less wide */
+.search-result-grid .map-card {
+  max-width: 100%; /* Control maximum width */
+  overflow: hidden;
+}
+
+.search-result-grid .map-container {
+  height: 150px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* Add styles for college additional information */
+.college-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.college-rank, .college-average {
+  background: #f0f4f8;
+  color: #2c5282;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+.college-rank i, .college-average i {
+  margin-right: 5px;
+  color: #f0810f;
+}
+
+.college-rank span, .college-average span {
+  font-weight: bold;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 992px) {
+  .search-result-grid {
+    grid-template-columns: 1.2fr 0.8fr; /* Two columns on medium screens */
+  }
+  
+  .search-result-grid .map-card {
+    grid-column: 1 / -1; /* Make map span full width on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .search-result-grid {
+    grid-template-columns: 1fr; /* One column on mobile */
+  }
+}
+
+/* Search Results Grid Layout - Adjusted column widths and alignment */
+.search-result-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.9fr; /* Adjusted proportions */
+  grid-gap: 5px; /* Added small gap between columns */
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-card {
+  padding: 15px;
+  background: white;
+  height: 100%;
+  min-height: 200px; /* Increased minimum height */
+  display: flex;
+  flex-direction: column;
+}
+
+.college-info-card {
+  border-right: 1px solid #eee;
+  padding-right: 10px; /* Reduced right padding */
+}
+
+.photo-slider-card {
+  border-right: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px; /* Adjusted padding */
+}
+
+/* Enhanced Photo Slider Styles */
+.photo-slider {
+  position: relative;
+  height: 170px; /* Increased height */
+  overflow: hidden;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  border-radius: 6px; /* Added border radius */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Added subtle shadow */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Ensure image centers properly */
+}
+
+/* Make map container better sized */
+.search-result-grid .map-container {
+  height: 170px; /* Increased from 150px */
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.map-card {
+  padding: 15px 10px; /* Adjusted padding */
+}
+
+/* Make location info in search card more compact */
+.location {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust search card spacing */
+.search-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #3a6ea5;
+  font-size: 1.2rem;
+}
+
+.search-card h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Better styling for college details in search card */
+.college-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.college-details p {
+  margin: 3px 0;
+}
+
+/* Add styles for college additional information */
+.college-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  margin-top: 8px;
+}
+
+.college-rank, .college-average, .college-fee {
+  background: #f0f4f8;
+  color: #2c5282;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+}
+
+.college-rank i, .college-average i, .college-fee i {
+  margin-right: 5px;
+  color: #f0810f;
+}
+
+.college-rank span, .college-average span, .college-fee span {
+  font-weight: bold;
+}
+
+/* Improved view details button positioning */
+.view-details-btn {
+  display: inline-block;
+  margin-top: 15px; /* Fixed value instead of auto */
+  margin-bottom: 10px; /* Added margin at bottom */
+  padding: 8px 15px;
+  background: linear-gradient(45deg, #f0810f, #f89b4c);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  position: relative; /* Added positioning */
+  z-index: 2; /* Ensure button is on top */
+}
+
+/* Add more bottom space to college info card */
+.college-info-card {
+  border-right: 1px solid #eee;
+  padding: 20px 15px; 
+  padding-bottom: 25px; /* Added more padding at bottom */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for the button to ensure proper spacing */
+.button-container {
+  margin-top: auto; /* Push to bottom but keep space for button */
+  padding-top: 10px;
+  min-height: 50px; /* Minimum height for button area */
+}
+
+/* Improved view details button positioning */
+.view-details-btn {
+  display: inline-block;
+  margin-top: auto; /* Push to bottom of flex container */
+  padding: 8px 15px;
+  background: linear-gradient(45deg, #f0810f, #f89b4c);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+/* Search Results Grid Layout - Adjusted column widths to 30-30-40 ratio */
+.search-result-grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr 4fr; /* Changed to 30% - 30% - 40% ratio */
+  grid-gap: 5px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-card {
+  padding: 15px;
+  background: white;
+  height: 100%;
+  min-height: 300px; /* Increased minimum height from 200px */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enhanced Photo Slider Styles */
+.photo-slider {
+  position: relative;
+  height: 250px; /* Increased height from 170px */
+  overflow: hidden;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Make map container larger and more prominent */
+.search-result-grid .map-container {
+  height: 250px; /* Increased from 170px to emphasize map importance */
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.map-card {
+  padding: 15px;
+}
+
+/* Responsive layout adjustments for new proportions */
+@media (max-width: 992px) {
+  .search-result-grid {
+    grid-template-columns: 1fr 1fr; /* Two equal columns on medium screens */
+  }
+  
+  .search-result-grid .map-card {
+    grid-column: 1 / -1; /* Make map span full width on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .search-result-grid {
+    grid-template-columns: 1fr; /* One column on mobile */
+  }
+}
+
+/* Search Results Grid Layout - Adjusted for better spacing and visibility */
+.search-result-grid {
+  display: grid;
+  grid-template-columns: 4fr 2.5fr 3.5fr; /* Changed to give college details more space */
+  grid-gap: 5px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-card {
+  padding: 15px;
+  background: white;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.college-info-card {
+  border-right: 1px solid #eee;
+  padding: 20px 15px; /* Increased padding for better alignment */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enhanced Photo Slider Styles for full image display */
+.photo-slider {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  flex-grow: 1;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  background-color: #f0f4f8; /* Background color for empty areas */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+}
+
+.slide.active {
+  opacity: 1;
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Changed from cover to contain to show full image */
+  object-position: center;
+  background-color: #f0f4f8; /* Background for letterboxed images */
+}
+
+/* Make map container show only map and not directions */
+.search-result-grid .map-container {
+  height: 250px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.search-result-grid .map-container iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  /* Attempt to hide directions panel by scaling and positioning */
+  transform: scale(1.1);
+  transform-origin: center center;
+}
+
+/* Better spacing for college details */
+.college-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Increased gap */
+  font-size: 0.9rem; /* Slightly larger */
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.college-details p {
+  margin: 5px 0;
+  padding-left: 5px;
+  border-left: 3px solid #f0f4f8; /* Subtle left border for visual hierarchy */
+}
+
+/* Enhanced college meta display */
+.college-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-top: 12px;
+}
+
+.college-rank, .college-average, .college-fee {
+  background: #f0f4f8;
+  color: #2c5282;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow items to grow */
+  justify-content: space-between; /* Space between icon and text */
+}
+
+/* Fix for making sure the map is centered properly */
+.map-card {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive layout adjustments with new proportions */
+@media (max-width: 992px) {
+  .search-result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .search-result-grid .map-card {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Completely revised view details button positioning */
+.view-details-btn {
+  display: inline-block;
+  position: absolute; /* Changed from relative to absolute */
+  bottom: 15px; /* Position from bottom instead of using margin */
+  left: 15px; /* Align from left */
+  padding: 8px 15px;
+  background: linear-gradient(45deg, #f0810f, #f89b4c);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  z-index: 10; /* Ensure it's above other elements */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1); /* Add shadow for better visibility */
+}
+
+/* Update college info card to properly position the button */
+.college-info-card {
+  border-right: 1px solid #eee;
+  padding: 20px 15px;
+  padding-bottom: 60px; /* Increased bottom padding to make room for button */
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Added to contain absolute positioned button */
+}
+
+/* Remove duplicate button definition that appears later in the file */
+/* Note: The second .view-details-btn definition with margin-top: auto should be removed */
+
+/* Add specific styles for the button in the college info card */
+.college-info-card .view-details-btn {
+  bottom: 20px; /* Specific position for this context */
+}
+
+/* Responsive layout adjustments with new proportions */
+@media (max-width: 768px) {
+  .search-result-grid {
+    grid-template-columns: 1fr; /* One column on mobile */
+  }
+}
+
+/* PROMINENT VIEW DETAILS BUTTON - GUARANTEED VISIBLE */
+.view-details-btn {
+  display: block !important; /* Force display */
+  position: static !important; /* Reset to normal positioning */
+  margin: 20px auto 15px auto !important; /* Center with good spacing */
+  padding: 10px 20px !important;
+  width: 80% !important; /* Set specific width */
+  text-align: center !important;
+  background: linear-gradient(45deg, #f0810f, #e53e3e) !important; /* Bright gradient */
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 4px !important;
+  font-weight: bold !important;
+  font-size: 1rem !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important; /* Strong shadow */
+  transition: all 0.3s ease !important;
+  border: 2px solid #fff !important; /* White border for contrast */
+  z-index: 9999 !important; /* Very high z-index */
+}
+
+.view-details-btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3) !important;
+}
+
+/* Fix the college info card for button placement */
+.college-info-card {
+  border-right: 1px solid #eee;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Facility Locator Styles */
+.map-facilities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .map-facilities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.facilities-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.facilities-header {
+  padding: 15px;
+  background: #f0f4f8;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.facilities-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2c5282;
+  margin: 0;
+}
+
+.facilities-filter {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+}
+
+.filter-btn {
+  background: #e2e8f0;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  color: #4a5568;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.filter-btn.active {
+  background: #3a6ea5;
+  color: white;
+}
+
+.filter-btn:hover {
+  background: #cbd5e0;
+}
+
+.facilities-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 15px;
+}
+
+.facility-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 10px;
+  border-bottom: 1px solid #edf2f7;
+  transition: background-color 0.3s;
+  margin-bottom: 5px;
+}
+
+.facility-item:hover {
+  background-color: #f0f7ff;
+}
+
+/* Adding facility animation */
+.facility-item {
+  animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.facility-icon {
+  width: 40px;
+  height: 40px;
+  background: #e6f0ff;
+  color: #3a6ea5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.facility-info {
+  flex: 1;
+}
+
+.facility-name {
+  font-weight: 600;
+  color: #2c5282;
+  margin-bottom: 4px;
+}
+
+.facility-location {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.facility-distance {
+  font-weight: 600;
+  color: #f0810f;
+  font-size: 0.85rem;
+}
+
+.no-facilities {
+  padding: 30px;
+  text-align: center;
+  color: #718096;
+}

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        .college-detail-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .college-header {
+            padding: 30px;
+            background: linear-gradient(45deg, #3a6ec5, #2c5282);
+            color: white;
+            position: relative;
+        }
+
+        .college-header h1 {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        .college-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .college-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .college-meta i {
+            color: #f0810f;
+        }
+
+        .college-body {
+            padding: 30px;
+        }
+
+        .college-section {
+            margin-bottom: 30px;
+        }
+
+        .college-section h2 {
+            color: #2c5282;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #edf2f7;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-card .value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c5282;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .label {
+            color: #718096;
+            text-align: center;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #f0810f;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .course-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 15px;
+            background: #f8fafc;
+            transition: all 0.3s;
+        }
+
+        .course-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .course-name {
+            color: #2c5282;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .course-details {
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        .course-details p {
+            margin: 5px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .course-details .label {
+            color: #718096;
+        }
+
+
+
+        /* Add these styles in your existing style tag */
+        .events-list {
+            margin-top: 15px;
+        }
+
+        .event-card {
+            border-left: 4px solid #3a6ec5;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: #f8fafc;
+            border-radius: 4px;
+        }
+
+        .event-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .event-title {
+            font-weight: bold;
+            color: #2c5282;
+            font-size: 1.1rem;
+        }
+
+        .event-date {
+            font-weight: 600;
+            color: #718096;
+        }
+
+        .event-location {
+            color: #4a5568;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .event-description {
+            margin-top: 8px;
+            color: #4a5568;
+        }
+
+        .event-register {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 6px 12px;
+            background: #3a6ec5;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <header style="background-color: #fff; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div
+            style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
+            <a href="/" style="text-decoration: none; color: #2c5282; font-size: 1.5rem; font-weight: bold;">
+                FindCollege
+            </a>
+
+            <div>
+                <a href="/" style="margin-right: 15px; color: #555; text-decoration: none;">Home</a>
+                <a href="/login.html" id="loginLink"
+                    style="color: #3a6ea5; margin-right: 15px; text-decoration: none;">Login</a>
+                <a href="/register.html" id="registerLink"
+                    style="color: #3a6ea5; margin-right: 15px; text-decoration: none;">Register</a>
+                <a href="#" id="logoutLink" style="color: #3a6ea5; display: none; text-decoration: none;">Logout</a>
+                <span id="userWelcome" style="color: #333; display: none;">Welcome, <span id="username"></span></span>
+            </div>
+        </div>
+    </header>
+
+    <div id="collegeDetailContainer" class="college-detail-container">
+        <div id="loading" style="padding: 30px; text-align: center;">Loading college details...</div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>about us</h2>
+                <p>Assisting students</p>
+            </div>
+            <div class="footer-section-link">
+                <h2>Quick links</h2>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="/admin/login.html" style="opacity:0.7;">Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 FindCollege.All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get college ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const collegeId = urlParams.get('id');
+
+            if (!collegeId) {
+                document.getElementById('collegeDetailContainer').innerHTML =
+                    '<div style="padding:30px; text-align:center;">College not found. <a href="/">Go back</a></div>';
+                return;
+            }
+
+            // Fetch college details from API
+            fetch(`/college/${collegeId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('College not found');
+                    }
+                    return response.json();
+                })
+                .then(college => {
+                    // Update page title
+                    document.title = `${college.name} - College Details`;
+
+                    // Fallback values for optional fields
+                    const description = college.description || "This college is known for its academic excellence and comprehensive education approach.";
+                    const established = college.established_year || "N/A";
+                    const students = college.total_students || "N/A";
+                    const placement = college.placement_rate || 95;
+                    const avgPackage = college.avg_package || 12.5;
+
+                    const container = document.getElementById('collegeDetailContainer');
+                    container.innerHTML = `
+                        <div class="college-header">
+                            <h1>${college.name}</h1>
+                            <div class="college-meta">
+                                <span><i class="fas fa-map-marker-alt"></i> ${college.location}</span>
+                                <span><i class="fas fa-trophy"></i> NIRF Rank: #${college.ranking}</span>
+                                <span><i class="fas fa-calendar-alt"></i> Est. ${established}</span>
+                                <span><i class="fas fa-globe"></i> ${college.website || 'Website: N/A'}</span>
+                            </div>
+                            <button id="applyNowBtn" class="apply-now-btn">Apply Now</button>
+                        </div>
+                        
+                        <div class="college-body">
+                            <div class="college-section">
+                                <h2>College Overview</h2>
+                                <p>${description}</p>
+                                <p>${college.accreditation ? `<strong>Accreditation:</strong> ${college.accreditation}` : ''}</p>
+                            </div>
+                            
+                            <div class="college-section">
+                                <h2>Key Statistics</h2>
+                                <div class="stats-grid">
+                                    <div class="stat-card">
+                                        <div class="value">${placement}%</div>
+                                        <div class="label">Placement Rate</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="value">₹${avgPackage} LPA</div>
+                                        <div class="label">Average Package</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="value">${students}+</div>
+                                        <div class="label">Students</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="value">#${college.ranking}</div>
+                                        <div class="label">NIRF Ranking</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="college-section">
+                                <h2>Available Courses</h2>
+                                <div id="coursesList" class="course-list">
+                                    <p>Loading courses...</p>
+                                </div>
+                            </div>
+
+                            <div class="college-section">
+                                <h2>Upcoming Events</h2>
+                                <div id="eventsList" class="events-list">
+                                    <p>Loading events...</p>
+                                </div>
+                            </div>
+                            
+                            <div class="college-section">
+                                <h2>Campus Amenities</h2>
+                                <p>${college.amenities || 'Library, Sports Complex, Cafeteria, Computer Labs, Wi-Fi Campus'}</p>
+                            </div>
+                            
+                            <div class="college-section">
+    <h2>Campus Location & Facilities</h2>
+    <div class="map-facilities-grid">
+        <div id="mapContainer">
+            <!-- Map will be loaded here -->
+        </div>
+        <div class="facilities-container">
+            <div class="facilities-header">
+                <h3 class="facilities-title">Campus Facilities</h3>
+                <div class="facilities-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="library">Library</button>
+                    <button class="filter-btn" data-filter="sports">Sports</button>
+                    <button class="filter-btn" data-filter="food">Food</button>
+                    <button class="filter-btn" data-filter="residence">Residence</button>
+                </div>
+            </div>
+            <div class="facilities-list" id="facilitiesList">
+                <p class="no-facilities">Loading facilities...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="college-section">
+    <h2>Campus Gallery</h2>
+    <div id="photoGalleryContainer">
+        <!-- Photos will be loaded here -->
+    </div>
+</div>
+
+                            <a href="/" class="back-btn">Back to Search</a>
+                                     </div>
+                    `;
+
+                    // Fetch courses for this college
+                    fetch(`/college/${collegeId}/courses`)
+                        .then(response => response.json())
+                        .then(courses => {
+                            const coursesList = document.getElementById('coursesList');
+
+                            if (courses.length === 0) {
+                                coursesList.innerHTML = '<p>No courses information available.</p>';
+                                return;
+                            }
+
+                            coursesList.innerHTML = '';
+                            courses.forEach(course => {
+                                const courseCard = document.createElement('div');
+                                courseCard.className = 'course-card';
+                                courseCard.innerHTML = `
+                                    <div class="course-name">${course.name}</div>
+                                    <div>${course.degree_type || ''} ${course.duration || ''}</div>
+                                    <div class="course-details">
+                                        <p>
+                                            <span class="label">Annual Fee:</span>
+                                            <span class="value">₹${course.annual_fee ? course.annual_fee.toLocaleString('en-IN') : 'N/A'}</span>
+                                        </p>
+                                        <p>
+                                            <span class="label">Seats:</span>
+                                            <span class="value">${course.seats || 'N/A'}</span>
+                                        </p>
+                                    </div>
+                                `;
+                                coursesList.appendChild(courseCard);
+                            });
+                        })
+                        .catch(error => {
+                            console.error('Error fetching courses:', error);
+                            document.getElementById('coursesList').innerHTML =
+                                '<p>Could not load course information.</p>';
+                        });
+
+
+                })
+                .catch(error => {
+                    console.error('Error fetching college details:', error);
+                    document.getElementById('collegeDetailContainer').innerHTML =
+                        '<div style="padding:30px; text-align:center;">Error loading college details. <a href="/">Go back</a></div>';
+                });
+
+            // Add this JavaScript after your courses fetch code
+
+            // Fetch events for this college
+            fetch(`/college/${collegeId}/events`)
+                .then(response => response.json())
+                .then(events => {
+                    const eventsList = document.getElementById('eventsList');
+
+                    if (events.length === 0) {
+                        eventsList.innerHTML = '<p>No upcoming events at this time.</p>';
+                        return;
+                    }
+
+                    eventsList.innerHTML = '';
+                    events.forEach(event => {
+                        const eventDate = new Date(event.event_date);
+                        const formattedDate = eventDate.toLocaleDateString('en-US', {
+                            weekday: 'short',
+                            month: 'short',
+                            day: 'numeric',
+                            year: 'numeric'
+                        });
+                        const formattedTime = eventDate.toLocaleTimeString('en-US', {
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        });
+
+                        const eventCard = document.createElement('div');
+                        eventCard.className = 'event-card';
+                        eventCard.innerHTML = `
+                <div class="event-header">
+                    <div class="event-title">${event.title}</div>
+                    <div class="event-date">${formattedDate}, ${formattedTime}</div>
+                </div>
+                <div class="event-location">
+                    <i class="fas fa-map-marker-alt"></i> ${event.location || 'College Campus'}
+                </div>
+                <div class="event-description">${event.description || ''}</div>
+                ${event.registration_url ?
+                                `<a href="${event.registration_url}" class="event-register" target="_blank">Register</a>` : ''}
+            `;
+                        eventsList.appendChild(eventCard);
+                    });
+                })
+
+
+
+                
+                .catch(error => {
+                    console.error('Error fetching events:', error);
+                    document.getElementById('eventsList').innerHTML =
+                        '<p>Could not load event information.</p>';
+                });
+
+
+
+                // Add this code RIGHT HERE - between the events catch block and the auth check
+
+// Load photo gallery and map
+fetch(`/college/${collegeId}`)
+    .then(response => response.json())
+    .then(college => {
+        // Add photo gallery
+        const photoContainer = document.getElementById('photoGalleryContainer');
+        let hasPhotos = false;
+        let photosHtml = '<div class="photo-gallery" style="display: flex; overflow-x: auto; gap: 15px; padding: 10px 0;">';
+
+        // Helper function to check if image exists
+        function addImageWithFallback(url, index) {
+            if (!url) return '';
+            
+            // Create a data URI for a placeholder image
+            const placeholderImage = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDgwMCIgd2lkdGg9IjEyMDAiIGhlaWdodD0iODAwIj48cmVjdCBmaWxsPSIjZWVlZWVlIiB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI4MDAiLz48dGV4dCBmaWxsPSIjOTk5OTk5IiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgeD0iNTAwIiB5PSI0MjAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPkltYWdlIGxvYWRpbmcgZmFpbGVkPC90ZXh0Pjwvc3ZnPg==';
+            
+            return `<img src="${url}" alt="Campus view ${index}" 
+                style="height: 200px; border-radius: 8px; cursor: pointer;" 
+                onerror="this.onerror=null; this.src='${placeholderImage}'; this.style.opacity='0.7';" 
+                onclick="window.open('${url}', '_blank')">`;
+        }
+
+        // Add photos to the gallery
+        if (college.photo_link1) {
+            photosHtml += addImageWithFallback(college.photo_link1, 1);
+            hasPhotos = true;
+        }
+
+        if (college.photo_link2) {
+            photosHtml += addImageWithFallback(college.photo_link2, 2);
+            hasPhotos = true;
+        }
+
+        if (college.photo_link3) {
+            photosHtml += addImageWithFallback(college.photo_link3, 3);
+            hasPhotos = true;
+        }
+
+        if (college.photo_link4) {
+            photosHtml += addImageWithFallback(college.photo_link4, 4);
+            hasPhotos = true;
+        }
+
+        // Close the photo gallery div
+        photosHtml += '</div>';
+
+        // Set the HTML content based on whether photos were found
+        if (hasPhotos) {
+            photoContainer.innerHTML = photosHtml;
+        } else {
+            photoContainer.innerHTML = '<div style="padding: 30px; text-align: center; background: #f8fafc; border-radius: 8px; color: #718096;">No campus photos available</div>';
+        }
+        
+        // Add map
+        const mapContainer = document.getElementById('mapContainer');
+
+// Function to create a fallback map based on college name and location
+function createFallbackMap(name, location) {
+    return `
+        <iframe 
+            width="100%" 
+            height="400" 
+            frameborder="0" 
+            style="border:0; border-radius: 8px;" 
+            src="https://maps.google.com/maps?q=${encodeURIComponent(name + ', ' + location)}&output=embed" 
+            allowfullscreen>
+        </iframe>
+    `;
+}
+
+// If there's a map link, try to use it; otherwise create a fallback map
+try {
+    if (college.map_link) {
+        // If it contains iframe HTML code, insert it directly
+        if (college.map_link.trim().includes('<iframe')) {
+            mapContainer.innerHTML = college.map_link;
+        }
+        // Fallback for old-style links
+        else {
+            mapContainer.innerHTML = createFallbackMap(college.name, college.location);
+        }
+    } else {
+        // Case 4: No map link - create a fallback map based on college name and location
+        mapContainer.innerHTML = createFallbackMap(college.name, college.location);
+    }
+    
+    // Add satellite link if available
+    if (college.satellite_link) {
+        const immersiveButton = document.createElement('button');
+        immersiveButton.classList.add('immersive-btn');
+        immersiveButton.textContent = 'Immersive View';
+        immersiveButton.addEventListener('click', function() {
+            showImmersiveView(collegeId);
+        });
+        mapContainer.appendChild(immersiveButton);
+    }
+} catch (e) {
+    console.error('Map embedding error:', e);
+    // Even if there's an error, try to create a fallback map
+    mapContainer.innerHTML = createFallbackMap(college.name, college.location);
+}
+
+// Create immersive view modal if it doesn't exist
+if (!document.querySelector('.immersive-modal')) {
+    const immersiveModal = document.createElement('div');
+    immersiveModal.classList.add('immersive-modal');
+    immersiveModal.innerHTML = `
+        <div class="close-immersive" onclick="closeImmersiveView()">&times;</div>
+        <div class="immersive-content" id="immersive-content"></div>
+    `;
+    document.body.appendChild(immersiveModal);
+}
+
+// Function to show immersive view
+function showImmersiveView(collegeId) {
+    fetch(`/college/${collegeId}`)
+        .then(response => response.json())
+        .then(college => {
+            const content = document.getElementById('immersive-content');
+            if (college.satellite_link && college.satellite_link.includes('<iframe')) {
+                // If it's already an iframe, use it directly
+                content.innerHTML = college.satellite_link;
+            } else if (college.satellite_link) {
+                // Fallback for old URL links
+                content.innerHTML = `<iframe src="${college.satellite_link}" style="width:100%;height:100%;border:0;" allowfullscreen></iframe>`;
+            } else {
+                content.innerHTML = `<div style="padding: 50px; background: white; text-align: center;">No immersive view available</div>`;
+            }
+            document.querySelector('.immersive-modal').style.display = 'block';
+        })
+        .catch(error => {
+            console.error('Error loading immersive view:', error);
+        });
+}
+
+// Function to close immersive view
+function closeImmersiveView() {
+    document.querySelector('.immersive-modal').style.display = 'none';
+}
+
+    })
+
+    .catch(error => {
+        console.error('Error fetching college data for photos and map:', error);
+    });
+
+// Check if user is logged in (existing code)
+
+            // Check if user is logged in
+            fetch('/check-auth')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.authenticated) {
+                        document.getElementById('loginLink').style.display = 'none';
+                        document.getElementById('registerLink').style.display = 'none';
+                        document.getElementById('logoutLink').style.display = 'inline';
+                        document.getElementById('userWelcome').style.display = 'inline';
+                        document.getElementById('username').textContent = data.username;
+                    }
+                })
+                .catch(error => console.error('Error checking auth:', error));
+
+            // Handle logout
+            document.getElementById('logoutLink').addEventListener('click', function (e) {
+                e.preventDefault();
+                fetch('/logout')
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            window.location.reload();
+                        }
+                    })
+                    .catch(error => console.error('Error during logout:', error));
+            });
+        });
+
+        // Apply Now Button Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            // This ensures the button gets connected after it's created in the DOM
+            setTimeout(() => {
+                const applyButton = document.getElementById('applyNowBtn');
+                if (applyButton) {
+                    applyButton.addEventListener('click', function () {
+                        // Get college ID from URL parameter again
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const collegeId = urlParams.get('id');
+
+                        // Check if user is logged in
+                        fetch('/check-auth')
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.authenticated) {
+                                    // User is logged in, redirect to application form
+                                    window.location.href = `/apply.html?collegeId=${collegeId}`;
+                                } else {
+                                    // User is not logged in, show login prompt
+                                    document.getElementById('loginPromptModal').style.display = 'block';
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error checking authentication:', error);
+                                alert('Something went wrong. Please try again.');
+                            });
+                    });
+                }
+            }, 1000); // Small delay to ensure DOM is fully loaded with dynamic content
+        });
+
+// Fetch facilities for this college
+fetch(`/college/${collegeId}/facilities`)
+    .then(response => response.json())
+    .then(facilities => {
+        const facilitiesList = document.getElementById('facilitiesList');
+
+        if (facilities.length === 0) {
+            facilitiesList.innerHTML = '<p class="no-facilities">No facilities information available.</p>';
+            return;
+        }
+
+        facilitiesList.innerHTML = '';
+        facilities.forEach(facility => {
+            const facilityItem = document.createElement('div');
+            facilityItem.className = 'facility-item';
+            facilityItem.dataset.type = facility.type;
+            
+            // Choose icon based on facility type
+            let icon = 'question';
+            switch (facility.type) {
+                case 'library': icon = 'book'; break;
+                case 'sports': icon = 'running'; break;
+                case 'food': icon = 'utensils'; break;
+                case 'residence': icon = 'home'; break;
+                case 'lab': icon = 'flask'; break;
+                case 'medical': icon = 'first-aid'; break;
+                case 'transport': icon = 'bus'; break;
+                default: icon = 'building';
+            }
+            
+            facilityItem.innerHTML = `
+                <div class="facility-icon">
+                    <i class="fas fa-${icon}"></i>
+                </div>
+                <div class="facility-info">
+                    <div class="facility-name">${facility.name}</div>
+                    <div class="facility-location">${facility.location || 'On campus'}</div>
+                </div>
+                ${facility.distance ? `<div class="facility-distance">${facility.distance}</div>` : ''}
+            `;
+            
+            facilitiesList.appendChild(facilityItem);
+        });
+
+        // Add filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active state
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                const filter = button.dataset.filter;
+                const items = document.querySelectorAll('.facility-item');
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.dataset.type === filter) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching facilities:', error);
+        document.getElementById('facilitiesList').innerHTML = 
+            '<p class="no-facilities">Could not load facilities information.</p>';
+    });
+    </script>
+
+    <!-- Login Prompt Modal -->
+    <div id="loginPromptModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn"
+                onclick="document.getElementById('loginPromptModal').style.display='none'">&times;</span>
+            <h2>Login Required</h2>
+            <p>You need to be logged in to apply for this college.</p>
+            <div style="display: flex; gap: 15px; margin-top: 20px;">
+                <a href="/login.html" class="apply-now-btn"
+                    style="text-decoration: none; text-align: center; flex: 1;">Login</a>
+                <a href="/register.html" class="apply-now-btn"
+                    style="background: linear-gradient(45deg, #3182ce, #2c5282); text-decoration: none; text-align: center; flex: 1;">Register</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
